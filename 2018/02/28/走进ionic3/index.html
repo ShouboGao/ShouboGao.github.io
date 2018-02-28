@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ionic 3.x," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Ionic 官网：https://ionicframework.com/docs/  安装 cordova ionicnpm install -g cordova ionic 使用 ionic 创建项目创建浏览器运行的项目：1.需要安装 nodejs 2.安装 npm install -g cordova ionic ">
+<meta name="keywords" content="ionic 3.x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="走进ionic3">
+<meta property="og:url" content="http://yoursite.com/2018/02/28/走进ionic3/index.html">
+<meta property="og:site_name" content="放首一博">
+<meta property="og:description" content="Ionic 官网：https://ionicframework.com/docs/  安装 cordova ionicnpm install -g cordova ionic 使用 ionic 创建项目创建浏览器运行的项目：1.需要安装 nodejs 2.安装 npm install -g cordova ionic 3.创建项目: ionic start myApp tabs 4.cd 到刚才创">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-28T13:40:21.073Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="走进ionic3">
+<meta name="twitter:description" content="Ionic 官网：https://ionicframework.com/docs/  安装 cordova ionicnpm install -g cordova ionic 使用 ionic 创建项目创建浏览器运行的项目：1.需要安装 nodejs 2.安装 npm install -g cordova ionic 3.创建项目: ionic start myApp tabs 4.cd 到刚才创">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/28/走进ionic3/"/>
+
+
+
+
+
+  <title>走进ionic3 | 放首一博</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/ShouboGao" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">放首一博</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">放首一博</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/走进ionic3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Vincent">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="放首一博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">走进ionic3</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T21:39:46+08:00">
+                2018-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ionic/" itemprop="url" rel="index">
+                    <span itemprop="name">ionic</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Ionic"><a href="#Ionic" class="headerlink" title="Ionic"></a>Ionic</h1><blockquote>
+<p>官网：<a href="https://ionicframework.com/docs/" target="_blank" rel="noopener">https://ionicframework.com/docs/</a></p>
+</blockquote>
+<h2 id="安装-cordova-ionic"><a href="#安装-cordova-ionic" class="headerlink" title="安装 cordova ionic"></a>安装 cordova ionic</h2><pre><code>npm install -g cordova ionic
+</code></pre><h2 id="使用-ionic-创建项目"><a href="#使用-ionic-创建项目" class="headerlink" title="使用 ionic 创建项目"></a>使用 ionic 创建项目</h2><h3 id="创建浏览器运行的项目："><a href="#创建浏览器运行的项目：" class="headerlink" title="创建浏览器运行的项目："></a>创建浏览器运行的项目：</h3><pre><code>1.需要安装 nodejs
+2.安装 npm install -g cordova ionic
+3.创建项目: ionic start myApp tabs
+4.cd 到刚才创建的项目
+5.ionic serve 运行项目
+</code></pre><h2 id="ionic-创建组件"><a href="#ionic-创建组件" class="headerlink" title="ionic 创建组件"></a>ionic 创建组件</h2><pre><code>1.cd 到我们的项目目录
+2.ionic g component ComponentsModule
+3.ComponentsModule.ts中
+    import { TestComponent } from &quot;./test/test&quot;;
+    @NgModule({
+          declarations: [TestComponent],
+         imports: [],
+         exports: [TestComponent]
+    })
+4.app.module.ts中引入注册
+    import { ComponentsModule } from &quot;../components/components.module&quot;;
+    @NgModule({    
+        ....        
+        imports: [BrowserModule, ComponentsModule, IonicModule.forRoot(MyApp)],        
+        ....
+    })
+5.在 pages 里面的页面里面使用这些组件。
+    &lt;ion-content padding&gt;
+        &lt;test&gt;&lt;/test&gt;
+    &lt;/ion-content&gt;
+</code></pre><h2 id="创建页面以及页面跳转"><a href="#创建页面以及页面跳转" class="headerlink" title="创建页面以及页面跳转"></a>创建页面以及页面跳转</h2><pre><code>1.ionic g page news
+2.xxx.html中 
+    &lt;button ion-button color=&quot;secondary&quot; (click)=&apos;pushButton()&apos;&gt;
+3.xxx.ts中
+    import { NewsPage } from &quot;../news/news&quot;;
+    pushButton() {
+        this.navCtrl.push(NewsPage);
+      }
+</code></pre><h2 id="新增tabs页面"><a href="#新增tabs页面" class="headerlink" title="新增tabs页面"></a>新增tabs页面</h2><p>1.创建页面</p>
+<pre><code>ionic g page news
+</code></pre><p>2.在 app.module.ts 引入、注册</p>
+<pre><code>import { NewsPage } from &quot;../pages/news/news&quot;;
+declarations: [//声明组件
+    MyApp, 
+    AboutPage, 
+    ContactPage, 
+    HomePage, 
+    TabsPage,
+    NewsPage
+],
+    entryComponents: [//配置不会在模板中使用的组件
+    MyApp,
+    AboutPage,
+    ContactPage,
+    HomePage,
+    TabsPage,
+    NewsPage
+  ],
+</code></pre><p>3.在 tabs.ts 页面引入组件， 配置组件</p>
+<pre><code>import { NewsPage } from &quot;../news/news&quot;;
+export class TabsPage {
+  tab1Root = HomePage;
+  tab2Root = AboutPage;
+  tab3Root = ContactPage;
+  tab4Root = NewsPage;
+  constructor() {}
+}
+</code></pre><p>4.在 tabs.html 配置底部按钮以及图标</p>
+<pre><code>&lt;ion-tabs&gt;
+  &lt;ion-tab [root]=&quot;tab1Root&quot; tabTitle=&quot;Home&quot; tabIcon=&quot;home&quot;&gt;&lt;/ion-tab&gt;
+  &lt;ion-tab [root]=&quot;tab2Root&quot; tabTitle=&quot;About&quot; tabIcon=&quot;information-circle&quot;&gt;&lt;/ion-tab&gt;
+  &lt;ion-tab [root]=&quot;tab3Root&quot; tabTitle=&quot;Contact&quot; tabIcon=&quot;contacts&quot;&gt;&lt;/ion-tab&gt;
+  &lt;ion-tab [root]=&quot;tab4Root&quot; tabTitle=&quot;新闻&quot; tabIcon=&quot;apps&quot;&gt;&lt;/ion-tab&gt;
+&lt;/ion-tabs&gt;
+</code></pre><p>##去掉二级页面tabs菜单，修改返回按钮<br>找到 app.module.ts 修改下面代码</p>
+<pre><code>imports: [
+    BrowserModule,
+    ComponentsModule,
+    // IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      tabsHideOnSubPages: &quot;true&quot;, //隐藏全部子页面 tabs
+      backButtonText: &quot;返回&quot; //配置返回按钮
+    })
+  ],
+</code></pre><p>##UI组件 页面布局<br>1.Ionic提供的几种颜色</p>
+<pre><code>light\default\secondary\danger\dark
+</code></pre><p>2.Ionic中的按钮加<code>ion-button</code>属性</p>
+<pre><code>&lt;button ion-button color=&quot;light&quot; block&gt;按钮&lt;/button&gt;
+注：block 属性定义一个块状按钮
+</code></pre><p>3.<code>ion-button</code>里面可以放图标</p>
+<pre><code>&lt;button ion-button icon-right&gt;
+    Right Icon
+    &lt;ion-icon name=&quot;home&quot;&gt;&lt;/ion-icon&gt;
+&lt;/button&gt;
+注：ion-button 同级属性 icon-left icon-right icon-only clear
+</code></pre><p>4.Ionic中的图标 <code>ion-icon</code> </p>
+<p><a href="http://ionicframework.com/docs/ionicons/" target="_blank" rel="noopener">http://ionicframework.com/docs/ionicons/</a></p>
+<pre><code>&lt;ion-icon name=&quot;home&quot; color=&quot;secondary&quot;&gt;&lt;/ion-icon&gt;
+注：改变图标的大小只需要改对应的 css 就可以用到: font-size 属性
+</code></pre><p>5.Ionic中的列表</p>
+<pre><code>5-1.基本列表
+    &lt;ion-list&gt;
+        &lt;ion-item *ngFor=&quot;let item of items&quot;&gt;
+              {{item.title}}
+              &lt;ion-icon name=&quot;ios-arrow-forward&quot; item-end&gt;&lt;/ion-icon&gt;
+        &lt;/ion-item&gt;    
+        &lt;/ion-list&gt;
+</code></pre><hr>
+<pre><code>5-2.分组列表
+    &lt;ion-list&gt;
+        &lt;ion-item-divider color=&quot;light&quot;&gt;A&lt;/ion-item-divider&gt;
+        &lt;ion-item&gt;Angola&lt;/ion-item&gt;
+        &lt;ion-item&gt;Argentina&lt;/ion-item&gt;
+        &lt;ion-item&gt;Angola&lt;/ion-item&gt;
+        &lt;ion-item&gt;Argentina&lt;/ion-item&gt;
+        &lt;ion-item-divider color=&quot;secondary&quot;&gt;B&lt;/ion-item-divider&gt;
+        &lt;ion-item&gt;Bngola&lt;/ion-item&gt;
+        &lt;ion-item&gt;Brgentina&lt;/ion-item&gt;
+        &lt;ion-item&gt;Bngola&lt;/ion-item&gt;
+        &lt;ion-item&gt;Brgentina&lt;/ion-item&gt;
+    &lt;/ion-list&gt;
+</code></pre><hr>
+<pre><code>5-3.列表中的图标 ion-icon 右侧箭头
+    &lt;ion-list&gt;
+        &lt;ion-item&gt;
+            &lt;ion-icon name=&quot;leaf&quot; item-start&gt;&lt;/ion-icon&gt;Herbology
+            &lt;ion-icon name=&quot;rose&quot; item-end&gt;&lt;/ion-icon&gt;
+        &lt;/ion-item&gt;
+    &lt;/ion-list&gt;
+    注：item-start 属性: 开头显示；item-end 属性: 结尾显示
+    +右侧箭头
+    &lt;ion-icon name=&quot;ios-arrow-forward&quot; item-end&gt;&lt;/ion-icon&gt;
+</code></pre><hr>
+<pre><code>5-4.列表中的头像 ion-avatar
+    &lt;ion-item&gt;
+        &lt;ion-avatar item-start&gt;
+            &lt;img src=&quot;img/avatar-cher.png&quot;&gt;
+        &lt;/ion-avatar&gt;
+        &lt;h2&gt;Tom&lt;/h2&gt;
+        &lt;p&gt;Where is Jerry?&lt;/p&gt;
+    &lt;/ion-item&gt;
+</code></pre><hr>
+<pre><code>5-5.列表中的图片 ion-thumbnail
+    &lt;ion-list&gt;
+        &lt;ion-item&gt;
+          &lt;ion-thumbnail item-start&gt;
+            &lt;img src=&quot;img/thumbnail-totoro.png&quot;&gt;
+          &lt;/ion-thumbnail&gt;
+          &lt;h2&gt;My Neighbor Totoro&lt;/h2&gt;
+          &lt;p&gt;Hayao Miyazaki • 1988&lt;/p&gt;
+          &lt;button ion-button clear item-end&gt;View&lt;/button&gt;
+        &lt;/ion-item&gt;
+    &lt;/ion-list&gt;    
+    注：item-start 属性: 开头显示；item-end 属性: 结尾显示
+</code></pre><hr>
+<pre><code>5-6.徽章的列表 ion-badge
+    &lt;ion-item&gt;
+        &lt;ion-icon name=&quot;logo-twitter&quot; item-start&gt;&lt;/ion-icon&gt;Followers
+        &lt;ion-badge item-end&gt;260k&lt;/ion-badge&gt;
+    &lt;/ion-item&gt;
+</code></pre><hr>
+<pre><code>5-7.滑动的列表
+    滑动列表就是在对应的列表上面滑动可以出现对应的按钮
+    &lt;ion-list&gt;
+        &lt;ion-item-sliding&gt;
+          &lt;ion-item&gt;
+            &lt;ion-avatar item-start&gt;
+              &lt;img src=&quot;img/slimer.png&quot;&gt;
+            &lt;/ion-avatar&gt;
+            &lt;h3&gt;Slimer&lt;/h3&gt;
+          &lt;/ion-item&gt;
+          &lt;ion-item-options side=&quot;left&quot;&gt;
+            &lt;button ion-button color=&quot;primary&quot;&gt;
+              &lt;ion-icon name=&quot;text&quot;&gt;&lt;/ion-icon&gt;
+              Text
+            &lt;/button&gt;
+            &lt;button ion-button color=&quot;secondary&quot;&gt;
+              &lt;ion-icon name=&quot;call&quot;&gt;&lt;/ion-icon&gt;
+              Call
+            &lt;/button&gt;
+          &lt;/ion-item-options&gt;
+          &lt;ion-item-options side=&quot;right&quot;&gt;
+            &lt;button ion-button color=&quot;primary&quot;&gt;
+              &lt;ion-icon name=&quot;mail&quot;&gt;&lt;/ion-icon&gt;
+              Email
+            &lt;/button&gt;
+          &lt;/ion-item-options&gt;
+        &lt;/ion-item-sliding&gt;
+    &lt;/ion-list&gt;
+    注：ion-item-options 里面的属性：side=&quot;left&quot;；side=&quot;right&quot;
+</code></pre><p>6.Ionic中的表单</p>
+<pre><code>6-1.
+&lt;ion-list&gt;
+    &lt;ion-item&gt;
+      &lt;ion-label fixed&gt;Username&lt;/ion-label&gt;
+      &lt;ion-input type=&quot;text&quot; value=&quot;&quot;&gt;&lt;/ion-input&gt;
+    &lt;/ion-item&gt;
+    &lt;ion-item&gt;
+      &lt;ion-label fixed&gt;Password&lt;/ion-label&gt;
+      &lt;ion-input type=&quot;password&quot;&gt;&lt;/ion-input&gt;
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;
+6-2.
+&lt;ion-list&gt;
+    &lt;ion-item&gt;
+      &lt;ion-input type=&quot;text&quot; placeholder=&quot;Username&quot;&gt;&lt;/ion-input&gt;
+    &lt;/ion-item&gt;
+    &lt;ion-item&gt;
+      &lt;ion-input type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;&lt;/ion-input&gt;
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;
+</code></pre><p>7.栅格系统</p>
+<pre><code>&lt;ion-grid&gt;
+    &lt;ion-row&gt;
+        &lt;ion-col col-12&gt;This column will take 12 columns&lt;/ion-col&gt;
+    &lt;/ion-row&gt;
+    &lt;ion-row&gt;
+        &lt;ion-col col-4&gt;This column will take 4 columns&lt;/ion-col&gt;
+    &lt;/ion-row&gt;
+&lt;/ion-grid&gt;
+</code></pre><p>##Ionic3.x 中的Javascript 扩展<br><a href="http://ionicframework.com/docs/components/" target="_blank" rel="noopener">http://ionicframework.com/docs/components/</a></p>
+<pre><code>1.ActionSheets 上拉菜单
+2.Alerts 弹出框    
+3.Toast 提示框
+4.Loading 加载中
+</code></pre><p>##Ionic3.x 中的路由导航 NavController 以及路由传值<br>1.NavController 路由跳转（不传参）</p>
+<pre><code>a.需要引入 NavController 模块
+    import { NavController } from &quot;ionic-angular&quot;;
+b.声明 NavController
+    constructor(public navCtrl: NavController) {}
+c.引入页面跳转
+    import { NewsPage } from &quot;../news/news&quot;;
+    ====分割线====
+    pushButton() {
+        this.navCtrl.push(NewsPage);
+    }
+d.在XXX.ts完成上述操作后，再在XXX.html中：
+    &lt;button ion-button color=&quot;light&quot; (click)=&apos;pushButton()&apos;&gt;
+        执行button
+    &lt;/button&gt;
+</code></pre><p>2.NavController 路由跳转（传参）</p>
+<pre><code>a.需要引入 NavController 模块(news.ts)
+    import { NavController } from &apos;ionic-angular&apos;;
+b.申明 NavController （实例化）
+    constructor(public navCtrl: NavController) {
+    }
+c.引入页面跳转传参
+    import { NewsinfoPage } from &quot;../newsinfo/newsinfo&quot;;
+    ====分割线====
+    goInfo() {
+        this.navCtrl.push(NewsinfoPage, {
+          id: &quot;24&quot;,
+          name: &quot;Kobe&quot;
+        });
+    }
+d.接收页面传参(newsinfo.ts)
+    引入 NavParmas 模块
+        import { NavParams } from &quot;ionic-angular&quot;;
+    获取传值
+        id: string;
+        name: string;
+        constructor(public navCtrl: NavController, public navParams: NavParams) {
+            this.id = navParams.get(&quot;id&quot;);
+            this.name = navParams.get(&quot;name&quot;);
+        }
+e.使用页面参数(newsinfo.html)
+    &lt;ion-content padding&gt;
+        &lt;h3&gt;{{id}}——{{name}}&lt;/h3&gt;
+    &lt;/ion-content&gt;
+</code></pre><p>3.通过属性路由跳转（传参）</p>
+<pre><code>a.引入页面定义数据(news.ts)
+    import { NewsinfoPage } from &quot;../newsinfo/newsinfo&quot;;
+    ====分割线====
+    params: any;
+    pushPage: any;
+    constructor(public navCtrl: NavController, public navParams: NavParams) {
+        this.pushPage = NewsinfoPage;
+        this.params = { id: 30 };
+    }
+b.属性绑定跳转的页面(news.html)
+    &lt;button ion-button [navPush]=&quot;pushPage&quot; [navParams]=&quot;params&quot;&gt;Go&lt;/button&gt;
+c.获取传过来的参数(newsinfo.ts)
+    id;
+    constructor(private navParams: NavParams) {
+        this.id = navParams.get(&quot;id&quot;);
+    }
+d.使用页面参数(newsinfo.html)
+    &lt;ion-content padding&gt;
+        &lt;h3&gt;{{id}}&lt;/h3&gt;
+    &lt;/ion-content&gt;
+</code></pre><h2 id="Ionic中-get-请求数据-可参考angular中数据的请求"><a href="#Ionic中-get-请求数据-可参考angular中数据的请求" class="headerlink" title="Ionic中 get 请求数据(可参考angular中数据的请求)"></a>Ionic中 get 请求数据(可参考angular中数据的请求)</h2><p>1.在 app.module.ts 引入 HttpModule、JsonpModule</p>
+<pre><code>import { HttpModule, JsonpModule } from &apos;@angular/http&apos;;    
+</code></pre><p>2.在 app.module.ts 依赖注入 HttpModule、JsonpModule</p>
+<pre><code>imports: [
+    BrowserModule,
+    ComponentsModule,
+    HttpModule,
+    JsonpModule,
+    // IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      tabsHideOnSubPages: &quot;true&quot;, //隐藏全部子页面 tabs
+      backButtonText: &quot;返回&quot; //配置返回按钮
+    })
+],
+</code></pre><p>3.在需要请求数据的地方引入Http (eg. home.ts)</p>
+<pre><code>import {Http,Jsonp} from &quot;@angular/http&quot;;
+</code></pre><p>4.构造函数内声明：</p>
+<pre><code>constructor(private http:Http,private jsonp:Jsonp) { }
+</code></pre><p>5.对应的方法内使用http请求数据</p>
+<pre><code>requestData() {
+    // alert(&apos;数据请求成功！&apos;)
+    let _that = this;
+    let url = &quot;http://www.phonegap100.com/appapi.php?a=getPortalList&amp;catid=20&amp;page=1&quot;;
+    this.http.get(url).subscribe(
+        function(data) {
+            console.log(JSON.parse(data[&quot;_body&quot;]));
+            _that.list = JSON.parse(data[&quot;_body&quot;]).result;
+        },
+        function(err) {
+            console.log(err);
+        }
+    );
+}
+====分割线====
+requestJsonpData() {
+let url =&quot;http://www.phonegap100.com/appapi.php?a=getPortalList&amp;catid=20&amp;page=1
+&amp;callback=JSONP_CALLBACK&quot;;
+this.jsonp.get(url).subscribe(
+  function(data) {
+    console.log(data);
+  },
+  function(err) {
+    console.log(&quot;失败&quot;);
+  }
+);
+}
+</code></pre><p>//6.页面中显示（eg. home.html）</p>
+<pre><code>&lt;button (click)=&quot;requestData()&quot;&gt;请求数据&lt;/button&gt;
+&lt;ion-list&gt;
+    &lt;ion-item *ngFor=&quot;let item of list&quot;&gt;
+      {{item.title}}
+    &lt;/ion-item&gt;
+&lt;/ion-list&gt;
+====分割线====
+&lt;button (click)=&quot;requestJsonpData()&quot;&gt; jsonp 请求数据&lt;/button&gt;
+</code></pre><h2 id="ionic中post提交数据"><a href="#ionic中post提交数据" class="headerlink" title="ionic中post提交数据"></a>ionic中post提交数据</h2><p>1.引入 Headers、Http 模块</p>
+<pre><code>import {Http,Jsonp,Headers} from &quot;@angular/http&quot;;
+</code></pre><p>2.实例化 Headers</p>
+<pre><code>private headers = new Headers({ &quot;Content-Type&quot;: &quot;application/json&quot; });
+</code></pre><p>3.post提交数据</p>
+<pre><code>postData() {
+    let url = &quot;http://127.0.0.1:3000/dologin&quot;;
+    this.http
+      .post(url, JSON.stringify({ username: &quot;zhangsan&quot; }), {
+        headers: this.headers
+      })
+      .subscribe(
+        function(data) {
+          console.log(data);
+        },
+        function(err) {
+          console.log(err);
+        }
+      );
+}
+</code></pre><h2 id="ionic-中数据请求结合路由跳转"><a href="#ionic-中数据请求结合路由跳转" class="headerlink" title="ionic 中数据请求结合路由跳转"></a>ionic 中数据请求结合路由跳转</h2><p>待补充</p>
+<p>##ionic3.x中ion-infinite-scroll上拉分页加载更多</p>
+<p>1.Ionic在上拉加载的页面中加入<code>ion-infinite-scroll</code></p>
+<pre><code>&lt;ion-list&gt;
+    &lt;ion-item *ngFor=&quot;let i of items&quot;&gt;{{i}}&lt;/ion-item&gt;
+&lt;/ion-list&gt;
+&lt;ion-infinite-scroll (ionInfinite)=&quot;doInfinite($event)&quot;&gt;
+    &lt;ion-infinite-scroll-content loadingSpinner=&quot;bubbles&quot; loadingText=&quot;Loading more data...&quot;&gt;
+    &lt;/ion-infinite-scroll-content&gt;
+&lt;/ion-infinite-scroll&gt;
+</code></pre><p><em>ion-infinite-scroll 的属性：</em></p>
+<pre><code>threshold 距离底部的距离;  
+enable 是否何用;
+position:button 显示的位置 可选 top  
+</code></pre><p><em>ion-infinite-scroll-content的属性</em> </p>
+<pre><code>loadingSpinner 配置上拉加载更多的图标  
+loadingText 上拉加载显示的文字
+</code></pre><p>2.对应页面的业务逻辑中写上拉更新的方法</p>
+<pre><code>items = [];
+constructor(public navCtrl: NavController) {
+    for (let i = 0; i &lt; 30; i++) {
+      this.items.push(this.items.length);
+    }
+}
+doInfinite(infiniteScroll) {
+    //请求数据
+  console.log(&quot;Begin async operation&quot;);
+  setTimeout(() =&gt; {
+    for (let i = 0; i &lt; 30; i++) {
+      this.items.push(this.items.length);
+    }
+    console.log(&quot;Async operation has ended&quot;);
+    infiniteScroll.complete();//当数据请求完成调用
+  }, 500);
+}
+</code></pre><p><em>重要的方法</em></p>
+<pre><code>infiniteScroll.complete(); //当数据请求完成调用
+if (this.items.length &gt; 90) {
+    infiniteScroll.enable(false); //没有数据的时候隐藏 ion-infinate-scroll
+}
+</code></pre><p>##Ionic3.x 中的 ion-refresher 下拉更新<br>1.Ionic 在下拉加载的页面中加入<code>ion-refresher</code></p>
+<pre><code>&lt;ion-refresher (ionRefresh)=&quot;doRefresh($event)&quot;&gt;
+    &lt;ion-refresher-content 
+        pullingIcon=&quot;arrow-dropdown&quot; 
+        pullingText=&quot;Pull to refresh&quot; 
+        refreshingSpinner=&quot;circles&quot; 
+        refreshingText=&quot;Refreshing...&quot;&gt;
+    &lt;/ion-refresher-content&gt;
+&lt;/ion-refresher&gt;
+</code></pre><p><em><code>ion-refresher</code> 的重要属性：</em></p>
+<pre><code>closeDuration：关闭 refresher 需要多少毫秒。 默认值是 280。
+enabled：是否启用。
+pullMax：默认 =pullMin+60 拖至刷新状态的最大距离将自动进入刷新状态。 默认情况下，拉力最大将 pullmin + 60 自动刷新。
+pullMin：默认=60 用户必须拉下的最小距离， 直到刷新者进入刷新状态为止。 默认值是60。
+snapbackDuration：刷新者需要多少毫秒才能恢复到刷新状态。 默认值是 280。
+</code></pre><p><em><code>ion-refresher-content</code> 的重要属性：</em></p>
+<pre><code>pullingIcon：下拉的图标；
+pullingText：下拉加载显示的文字；
+refreshingSpinner：释放的时候的加载图标；
+refreshingText：释放的时候的文字；
+</code></pre><p>2.对应页面的业务逻辑中写下拉更新的方法</p>
+<pre><code>doRefresh(refresher) {
+    console.log(&quot;Begin async operation&quot;, refresher);
+    setTimeout(() =&gt; {
+        console.log(&quot;Async operation has ended&quot;);
+        refresher.complete();
+    }, 2000);
+}
+</code></pre><p><em>重要的方法</em></p>
+<pre><code>refresher.complete(); //当数据请求完成调用
+</code></pre>
+      
+    </div>
+    
+    
+    
+  
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      </div>
+    
+    
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ionic-3-x/" rel="tag"><i class="fa fa-tag"></i> ionic 3.x</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/06/CSS的常用技巧/" rel="next" title="CSS的常用技巧">
+                <i class="fa fa-chevron-left"></i> CSS的常用技巧
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Vincent</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ionic"><span class="nav-number">1.</span> <span class="nav-text">Ionic</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-cordova-ionic"><span class="nav-number">1.1.</span> <span class="nav-text">安装 cordova ionic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-ionic-创建项目"><span class="nav-number">1.2.</span> <span class="nav-text">使用 ionic 创建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建浏览器运行的项目："><span class="nav-number">1.2.1.</span> <span class="nav-text">创建浏览器运行的项目：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic-创建组件"><span class="nav-number">1.3.</span> <span class="nav-text">ionic 创建组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建页面以及页面跳转"><span class="nav-number">1.4.</span> <span class="nav-text">创建页面以及页面跳转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新增tabs页面"><span class="nav-number">1.5.</span> <span class="nav-text">新增tabs页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ionic中-get-请求数据-可参考angular中数据的请求"><span class="nav-number">1.6.</span> <span class="nav-text">Ionic中 get 请求数据(可参考angular中数据的请求)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic中post提交数据"><span class="nav-number">1.7.</span> <span class="nav-text">ionic中post提交数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic-中数据请求结合路由跳转"><span class="nav-number">1.8.</span> <span class="nav-text">ionic 中数据请求结合路由跳转</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Vincent</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+-->
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
