@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="放首一博">
 <meta property="og:description" content="Ionic 官网：https://ionicframework.com/docs/  安装 cordova ionicnpm install -g cordova ionic 使用 ionic 创建项目创建浏览器运行的项目：1.需要安装 nodejs 2.安装 npm install -g cordova ionic 3.创建项目: ionic start myApp tabs 4.cd 到刚才创">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-28T14:30:37.507Z">
+<meta property="og:updated_time" content="2018-02-28T14:34:43.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="走进ionic3">
 <meta name="twitter:description" content="Ionic 官网：https://ionicframework.com/docs/  安装 cordova ionicnpm install -g cordova ionic 使用 ionic 创建项目创建浏览器运行的项目：1.需要安装 nodejs 2.安装 npm install -g cordova ionic 3.创建项目: ionic start myApp tabs 4.cd 到刚才创">
@@ -432,7 +432,7 @@ export class TabsPage {
   &lt;ion-tab [root]=&quot;tab3Root&quot; tabTitle=&quot;Contact&quot; tabIcon=&quot;contacts&quot;&gt;&lt;/ion-tab&gt;
   &lt;ion-tab [root]=&quot;tab4Root&quot; tabTitle=&quot;新闻&quot; tabIcon=&quot;apps&quot;&gt;&lt;/ion-tab&gt;
 &lt;/ion-tabs&gt;
-</code></pre><p>##去掉二级页面tabs菜单，修改返回按钮<br>找到 app.module.ts 修改下面代码</p>
+</code></pre><h2 id="去掉二级页面tabs菜单，修改返回按钮"><a href="#去掉二级页面tabs菜单，修改返回按钮" class="headerlink" title="去掉二级页面tabs菜单，修改返回按钮"></a>去掉二级页面tabs菜单，修改返回按钮</h2><p>找到 app.module.ts 修改下面代码</p>
 <pre><code>imports: [
     BrowserModule,
     ComponentsModule,
@@ -442,7 +442,7 @@ export class TabsPage {
       backButtonText: &quot;返回&quot; //配置返回按钮
     })
   ],
-</code></pre><p>##UI组件 页面布局<br>1.Ionic提供的几种颜色</p>
+</code></pre><h2 id="UI组件-页面布局"><a href="#UI组件-页面布局" class="headerlink" title="UI组件 页面布局"></a>UI组件 页面布局</h2><p>1.Ionic提供的几种颜色</p>
 <pre><code>light\default\secondary\danger\dark
 </code></pre><p>2.Ionic中的按钮加<code>ion-button</code>属性</p>
 <pre><code>&lt;button ion-button color=&quot;light&quot; block&gt;按钮&lt;/button&gt;
@@ -975,7 +975,7 @@ refreshingText：释放的时候的文字；
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ionic"><span class="nav-number">1.</span> <span class="nav-text">Ionic</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-cordova-ionic"><span class="nav-number">1.1.</span> <span class="nav-text">安装 cordova ionic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-ionic-创建项目"><span class="nav-number">1.2.</span> <span class="nav-text">使用 ionic 创建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建浏览器运行的项目："><span class="nav-number">1.2.1.</span> <span class="nav-text">创建浏览器运行的项目：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic-创建组件"><span class="nav-number">1.3.</span> <span class="nav-text">ionic 创建组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建页面以及页面跳转"><span class="nav-number">1.4.</span> <span class="nav-text">创建页面以及页面跳转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新增tabs页面"><span class="nav-number">1.5.</span> <span class="nav-text">新增tabs页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic3-x-中的Javascript-扩展"><span class="nav-number">1.6.</span> <span class="nav-text">ionic3.x 中的Javascript 扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic3-x-中的路由导航-NavController-以及路由传值"><span class="nav-number">1.7.</span> <span class="nav-text">ionic3.x 中的路由导航 NavController 以及路由传值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ionic中-get-请求数据-可参考angular中数据的请求"><span class="nav-number">1.8.</span> <span class="nav-text">Ionic中 get 请求数据(可参考angular中数据的请求)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic中post提交数据"><span class="nav-number">1.9.</span> <span class="nav-text">ionic中post提交数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic-中数据请求结合路由跳转"><span class="nav-number">1.10.</span> <span class="nav-text">ionic 中数据请求结合路由跳转</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ionic"><span class="nav-number">1.</span> <span class="nav-text">Ionic</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-cordova-ionic"><span class="nav-number">1.1.</span> <span class="nav-text">安装 cordova ionic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-ionic-创建项目"><span class="nav-number">1.2.</span> <span class="nav-text">使用 ionic 创建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建浏览器运行的项目："><span class="nav-number">1.2.1.</span> <span class="nav-text">创建浏览器运行的项目：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic-创建组件"><span class="nav-number">1.3.</span> <span class="nav-text">ionic 创建组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建页面以及页面跳转"><span class="nav-number">1.4.</span> <span class="nav-text">创建页面以及页面跳转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新增tabs页面"><span class="nav-number">1.5.</span> <span class="nav-text">新增tabs页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去掉二级页面tabs菜单，修改返回按钮"><span class="nav-number">1.6.</span> <span class="nav-text">去掉二级页面tabs菜单，修改返回按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UI组件-页面布局"><span class="nav-number">1.7.</span> <span class="nav-text">UI组件 页面布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic3-x-中的Javascript-扩展"><span class="nav-number">1.8.</span> <span class="nav-text">ionic3.x 中的Javascript 扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic3-x-中的路由导航-NavController-以及路由传值"><span class="nav-number">1.9.</span> <span class="nav-text">ionic3.x 中的路由导航 NavController 以及路由传值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ionic中-get-请求数据-可参考angular中数据的请求"><span class="nav-number">1.10.</span> <span class="nav-text">Ionic中 get 请求数据(可参考angular中数据的请求)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic中post提交数据"><span class="nav-number">1.11.</span> <span class="nav-text">ionic中post提交数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ionic-中数据请求结合路由跳转"><span class="nav-number">1.12.</span> <span class="nav-text">ionic 中数据请求结合路由跳转</span></a></li></ol></li></ol></div>
             
 
           </div>
